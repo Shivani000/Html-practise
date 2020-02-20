@@ -1,0 +1,80 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="probstat4.css">
+	<style>
+		h1{
+                color:blue;
+}
+	</style>
+	</head>
+<header>User Registration Screen</header>
+<body>
+	<script type ="text/javascript">
+		function validate()
+		{
+			var name=document.myform.name.value;
+			var pswd1=document.myform.pwd1.value;
+			var pswd2=document.myform.pwd2.value;
+			var v =pswd1.length;
+			var v1=pswd2.length;
+			if(name==null || name=="")
+			{
+				alert("User name required");
+				return false;
+			}
+
+			if(pswd1==null || pswd1=="")
+			{
+				alert("Password cant be null");
+				return false;
+			}
+			else if((v!=v1)||(v<8 && v1<8))
+			{
+				alert("Password must be same and should have 8 characters and your password have"+ v +" characters");
+				return false;
+			}
+		}
+	</script>
+	
+	<center>
+	<h1>Hotel Information System</h1>
+	<br>
+	<form action="pro4.htm" method="post" name="myform" onsubmit="return validate()">
+<table>
+<tr>
+<td>EmailID:</td>
+<td><input type="email" name="email"></td>
+</tr>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" required></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="Password" name="pwd1" pattern="[a-zA-Z][a-zA-Z0-9]+"></td>
+</tr>
+<td>Reset Password:</td>
+<td><input type="Password" name="pwd2" pattern="[a-zA-Z][a-zA-Z0-9]+"></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><textarea name="address" rows="5" cols="30" maxlength="250"></textarea> </td>
+</tr>
+<tr>
+<td>Mobile Number</td>
+<td>Mobile   <input type="tel" name="phone" maxlength="10" size="10"><br><br>
+	Landline <input type="tel" name="Landline"></td>
+</tr>
+<tr>
+<td ><input type="image" src="r1.jpg" alt="submit" height=100px width=200px></td>
+<td><input type="image" src="reset.jpg" alt="reset"height=100px width=100px></td>
+</tr>
+</table>
+</form>
+</center>
+
+</body>
+<footer>This website and its content is copyright of user Registration Screen</footer>
+
+</html>
